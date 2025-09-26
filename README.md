@@ -1,5 +1,7 @@
 # 🗺️ Google Maps Clone
 
+[![Deploy](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=github)](https://Muhammad-Khan-Khichi.github.io/Google-Map-Clone-in-tsx/)
+
 A Google Maps clone built using **TypeScript + TSX**.  
 This project demonstrates how to integrate map rendering, markers, search functionality, and geolocation into a modern web app.
 
@@ -15,10 +17,9 @@ This project demonstrates how to integrate map rendering, markers, search functi
 ---
 
 ## 🛠️ Tech Stack
-- **React** (with TypeScript + TSX)
-- **Map API**: (Google Maps API / Leaflet / Mapbox) – depending on what you’re using
-- **TailwindCSS** (for styling, optional)
-- **Vite / Webpack** (bundler, depending on setup)
+- **React / Vite** (with TypeScript + TSX)
+- **Google Maps API** (or Mapbox/Leaflet alternative)
+- **TailwindCSS** (for styling)
 
 ---
 
@@ -26,10 +27,20 @@ This project demonstrates how to integrate map rendering, markers, search functi
 
 ```bash
 # Clone the repo
-git clone https://github.com/Muhammad-Khan-Khichi/Google-Map-clone
+git clone https://github.com/Muhammad-Khan-Khichi/Google-Map-Clone-in-tsx.git
 
 # Go to project folder
-cd google-maps-clone
+cd Google-Map-Clone-in-tsx
+
+
+
+---
+
+✅ Now your README has a **"Live Demo" button** right under the title, so anyone visiting your repo can click it and see the deployed site.  
+
+Would you like me to also add a **GitHub Actions workflow** snippet so your site auto-deploys every time you push to `main` (no need to run `npm run deploy` manually)?
+
+
 
 # Install dependencies
 npm install
