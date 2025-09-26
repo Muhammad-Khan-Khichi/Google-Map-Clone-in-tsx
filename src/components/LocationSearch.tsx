@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import {  useState } from 'react'
 import type { Place } from '../api/Place'
 import { search } from '../api/Search';
 
@@ -19,36 +19,51 @@ function LocationSearch({ onPlaceClick }: LocationSearchProps) {
     }
 
   return (
-    <div>
-           <form onSubmit={handleSubmit}>
-            <label htmlFor="term" className='font-bold'>
-                Search
-            </label>
-            <input className='border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 px-4 py-2 w-full outline-0' 
-            id='term'
-            value={term}
-            onChange={e => setTerm(e.target.value)}
-            />
-           </form>
+<div className="space-y-6">
+  {/* Search Form */}
+  <form onSubmit={handleSubmit} className="space-y-2">
+    <label
+      htmlFor="term"
+      className="block text-gray-700 font-semibold text-sm"
+    >
+      🔍 Search for a location
+    </label>
+    <input
+      id="term"
+      value={term}
+      onChange={(e) => setTerm(e.target.value)}
+      placeholder="Enter a city, place, or address..."
+      className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm 
+                 focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 
+                 outline-none transition"
+    />
+  </form>
 
-           <h1 className='font-bold mt-6'>Found Locations</h1>
-           <div className='grid grid-cols-[1fr_40px gap-2 mt-2 items-center'>
-            {
-                places.map(place => {
-                    return <Fragment key={place.id}>
-                        <p className='text-sm'>{place.name}</p>
-                        <button
-                         className='bg-blue-500 text-xs text-white font-bold py-1 px-1 rounded'
-                         onClick={() => onPlaceClick(place)}
-                         >
-                            Go
-                            </button>
-                            <div className='border-b w-full col-span-2' />
-                    </Fragment>
-                })
-            }
-           </div>
+  {/* Results */}
+  <div>
+    <h1 className="text-lg font-bold text-gray-800 mb-3">
+      📍 Found Locations
+    </h1>
+
+    <div className="space-y-3">
+      {places.map((place) => (
+        <div
+          key={place.id}
+          className="flex items-center justify-between p-3 rounded-lg bg-white shadow-sm border border-gray-200 hover:shadow-md transition"
+        >
+          <p className="text-sm font-medium text-gray-700">{place.name}</p>
+          <button
+            className="bg-indigo-500 hover:bg-indigo-600 text-xs text-white font-semibold px-3 py-1 rounded transition"
+            onClick={() => onPlaceClick(place)}
+          >
+            Go
+          </button>
+        </div>
+      ))}
     </div>
+  </div>
+</div>
+
   )
 }
 
