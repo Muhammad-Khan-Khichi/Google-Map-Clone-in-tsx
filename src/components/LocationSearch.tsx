@@ -28,6 +28,7 @@ function LocationSearch({ onPlaceClick }: LocationSearchProps) {
       🔍 Search for a location
     </label>
     <input
+    autoComplete='off'
       id="term"
       value={term}
       onChange={(e) => setTerm(e.target.value)}
