@@ -20,7 +20,6 @@ function LocationSearch({ onPlaceClick }: LocationSearchProps) {
 
   return (
 <div className="space-y-6">
-  {/* Search Form */}
   <form onSubmit={handleSubmit} className="space-y-2">
     <label
       htmlFor="term"
@@ -39,7 +38,6 @@ function LocationSearch({ onPlaceClick }: LocationSearchProps) {
     />
   </form>
 
-  {/* Results */}
   <div>
     <h1 className="text-lg font-bold text-gray-800 mb-3">
       📍 Found Locations

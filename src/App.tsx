@@ -24,7 +24,6 @@ function App() {
         </div>
       </div>
 
-      {/* Map */}
       <div className="col-span-9 relative">
         <div className="h-full w-full rounded-l-2xl overflow-hidden shadow-md border border-gray-200">
           <Map place={place} />
